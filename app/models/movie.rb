@@ -25,7 +25,7 @@ class Movie < ActiveRecord::Base
       
       
       def self.find_movie_with_attributes(title, release_date)
-        Movie.find(title: title, release_date: release_date)
+        Movie.find_by(title: title, release_date: release_date)
       end
 
       def self.find_movies_after_2002(release_date)
